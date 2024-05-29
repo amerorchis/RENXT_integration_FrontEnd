@@ -1,0 +1,44 @@
+{
+  "name": "GNPC Tools",
+  "version": "2.1",
+  "manifest_version": 2,
+  "permissions": [
+    "activeTab",
+    "debugger",
+    "tabs",
+    "storage",
+    "notifications",
+    "https://gft-pusa01.app.blackbaud.net/*",
+    "http://gft-pusa01.app.blackbaud.net/*",
+    "https://host.nxt.blackbaud.com/*",
+    "http://host.nxt.blackbaud.com/*"
+  ],
+  "background": {
+    "page": "bg.html",
+    "persistent": true,
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://host.nxt.blackbaud.com/gift-batch/batch-review/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  }
+}
