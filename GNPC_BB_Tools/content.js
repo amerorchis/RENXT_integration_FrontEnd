@@ -194,6 +194,7 @@ function handleResponse(responseText) {
     appendSymbolsToNames(r.success, "✅");
     // Append " ❌" to fail names
     appendSymbolsToNames(r.fail, "❌");
+    appendSymbolsToNames(r.noConsent, "⚠️ (NC)");
 }
 
 // Function to display the outcome next to the button
